@@ -703,32 +703,24 @@ Public Class frmIndexEdit
             lblOID.Text = "..."
         End If
 
-
-
     End Sub
 
-
-    'This needs to be fixed before the system can be used to create goegraphic indexes!!!!!!!
-    'Currently the application is grabbing a PRJ file from a spot defined on the C drive, there needs to be a better way!
-    'For now I will just make sure it is put in C:\Geodex
-    'Hussein told me to grab the projection from the layer, but I think I want to make sure its WGS84 and the layer is in Web Mercator
+    'This grabs the projection from the install folder on the C drive
+    'The commented text below is something I'm working on to try to grab the projection from a feature sot hat the projection
+    'file doesn't need to be stored on the machine.
 
     Public Function GetcoordinateSystem() As IGeographicCoordinateSystem
         Dim pSpatialReferenceFactory As ISpatialReferenceFactory = New SpatialReferenceEnvironmentClass()
         Dim pGeographicCoordinateSystem As IGeographicCoordinateSystem = pSpatialReferenceFactory.CreateESRISpatialReferenceFromPRJFile("C:\GEODEX\wgs84.prj")
 
-        ' Dim pFeatureLayer As IFeatureLayer = GDXTools.getInstance.GetGeodexLayer
+        'Dim pFeatureLayer As IFeatureLayer = GDXTools.getInstance.GetGeodexLayer
         'Dim pFeatureClass As IFeatureClass = pFeatureLayer.FeatureClass
         'Dim pFeature As IFeature = pFeatureClass.GetFeature(My.Settings.CurrentOID)
-        ' Dim pGeoDataset As IGeoDataset = pFeatureLayer
-
-
+        'Dim pGeoDataset As IGeoDataset = pFeatureLayer
         'Dim sr As IGeographicCoordinateSystem = pGeoDataset.SpatialReference
 
         Return pGeographicCoordinateSystem
     End Function
-
-
 
     Private Sub btLoad_Click(sender As Object, e As EventArgs) Handles btLoad.Click
         If txtOID.Text Is Nothing Then
