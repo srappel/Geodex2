@@ -1,0 +1,9 @@
+ArcGIS Code Migration analyzer run on 12/8/2015 at 12:52 PM
+--------------------------------------------------------------
+Analyzing project: gdx_editor_tools
+
+The solution platform should be set to x86 so it can run properly on 64-bit machines.
+
+-------------------------
+
+Finished analysis. Check the Warnings in the Visual Studio Error List window for migration issues. 1 migration issues found.

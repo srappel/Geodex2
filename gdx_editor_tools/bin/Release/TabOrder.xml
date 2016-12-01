@@ -1,0 +1,102 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TabOrder
+</name>
+</assembly>
+<members>
+<member name="T:SMcMaster.TabOrderManager.TabSchemeComparer">
+	<summary>
+ Compare two controls in the selected tab scheme.
+ </summary>
+</member><member name="F:SMcMaster.TabOrderManager.container">
+	<summary>
+ The container whose tab order we manage.
+ </summary>
+</member><member name="F:SMcMaster.TabOrderManager.schemeOverrides">
+	<summary>
+ Hash of controls to schemes so that individual containers can have different ordering
+ strategies than their parents.
+ </summary>
+</member><member name="F:SMcMaster.TabOrderManager.curTabIndex">
+	<summary>
+ The tab index we start numbering from when the tab order is applied.
+ </summary>
+</member><member name="T:SMcMaster.TabOrderManager.TabScheme">
+	<summary>
+ The general tab-ordering strategy (i.e. whether we tab across rows first, or down columns).
+ </summary>
+</member><member name="M:SMcMaster.TabOrderManager.#ctor(System.Windows.Forms.Control)">
+	<summary>
+ Constructor
+ </summary>
+	<param name="container">The container whose tab order we manage.</param>
+</member><member name="M:SMcMaster.TabOrderManager.#ctor(System.Windows.Forms.Control,System.Int32,System.Collections.Hashtable)">
+	<summary>
+ Construct a tab order manager that starts numbering at the given tab index.
+ </summary>
+	<param name="container">The container whose tab order we manage.</param>
+	<param name="curTabIndex">Where to start numbering.</param>
+	<param name="schemeOverrides">List of controls with explicitly defined schemes.</param>
+</member><member name="M:SMcMaster.TabOrderManager.SetSchemeForControl(System.Windows.Forms.Control,SMcMaster.TabOrderManager.TabScheme)">
+	<summary>
+ Explicitly set a tab order scheme for a given (presumably container) control.
+ </summary>
+	<param name="c">The control to set the scheme for.</param>
+	<param name="scheme">The requested scheme.</param>
+</member><member name="M:SMcMaster.TabOrderManager.SetTabOrder(SMcMaster.TabOrderManager.TabScheme)">
+	<summary>
+ Recursively set the tab order on this container and all of its children.
+ </summary>
+	<param name="scheme">The tab ordering strategy to apply.</param>
+	<returns>The next tab index to be used.</returns>
+</member><member name="T:SMcMaster.TabOrderManager">
+	<summary>
+ Dynamically determine and set a tab order for a container and children according to a given strategy.
+ </summary>
+</member><member name="F:SMcMaster.TabSchemeProvider.extendees">
+	<summary>
+ Hashtable to store the controls that use our extender property.
+ </summary>
+</member><member name="F:SMcMaster.TabSchemeProvider.topLevelForm">
+	<summary>
+ The form we're hosted on, which will be calculated by watching the extendees entering the control hierarchy.
+ </summary>
+</member><member name="M:SMcMaster.TabSchemeProvider.GetTabScheme(System.Windows.Forms.Control)">
+	<summary>
+ Get whether or not we're managing a given control.
+ </summary>
+	<param name="c"></param>
+	<returns></returns>
+</member><member name="M:SMcMaster.TabSchemeProvider.HookFormLoad">
+	<summary>
+ Hook up to the form load event and indicate that we've done so.
+ </summary>
+</member><member name="M:SMcMaster.TabSchemeProvider.UnhookFormLoad">
+	<summary>
+ Unhook from the form load event and indicate that we need to do so again before applying tab schemes.
+ </summary>
+</member><member name="M:SMcMaster.TabSchemeProvider.HookParentChangedEvents(System.Windows.Forms.Control)">
+	<summary>
+ Hook up to all of the parent changed events for this control and its ancestors so that we are informed
+ if and when they are added to the top-level form (whose load event we need).
+ It's not adequate to look at just the control, because it may have been added to its parent, but the parent
+ may not be descendent of the form -yet-.
+ </summary>
+	<param name="c"></param>
+</member><member name="M:SMcMaster.TabSchemeProvider.Extendee_ParentChanged(System.Object,System.EventArgs)">
+	<summary>
+ We track when each extendee's parent is changed, and also when their parents are changed, until
+ SOMEBODY finally changes their parent to the form, at which point we can hook the load to apply
+ the tab schemes.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+</member><member name="T:SMcMaster.TabSchemeProvider">
+	<summary>
+ Wrap the TabOrderManager class and supply extendee controls with a custom tab scheme.
+ </summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="sheet" Type="System.String" Scope="User">
+      <Value Profile="(Default)">record</Value>
+    </Setting>
+    <Setting Name="CurrentOID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="northstring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">North</Value>
+    </Setting>
+    <Setting Name="southstring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">South</Value>
+    </Setting>
+    <Setting Name="weststring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">West</Value>
+    </Setting>
+    <Setting Name="eaststring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">East</Value>
+    </Setting>
+    <Setting Name="oldOID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GeodexLayer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Geodex</Value>
+    </Setting>
+    <Setting Name="server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WEBGIS</Value>
+    </Setting>
+    <Setting Name="instance" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sde:sqlserver:WEBGIS\GIS4SDE</Value>
+    </Setting>
+    <Setting Name="user" Type="System.String" Scope="User">
+      <Value Profile="(Default)">user</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">password</Value>
+    </Setting>
+    <Setting Name="database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Geodex</Value>
+    </Setting>
+    <Setting Name="version" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dbo.DEFAULT</Value>
+    </Setting>
+    <Setting Name="auth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OSA</Value>
+    </Setting>
+    <Setting Name="path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">H:\Departments\AGSL\GIS\Projects\GEODEX\Geodex.gdb</Value>
+    </Setting>
+    <Setting Name="DBLocal" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FeatureClassName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Geodex</Value>
+    </Setting>
+    <Setting Name="DefaultTable" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DEF</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
