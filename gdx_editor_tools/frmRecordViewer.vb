@@ -467,17 +467,31 @@ Public Class frmRecordViewer
             Dim pDataset As IDataset = pFeatureClass
             Dim pWorkspace As IWorkspace = pDataset.Workspace
             Dim pWorkspaceEdit As IWorkspaceEdit = pWorkspace
-            pWorkspaceEdit.StartEditing(True)
-            pWorkspaceEdit.StartEditOperation()
+
+            Try
+                pWorkspaceEdit.StartEditing(True)
+                pWorkspaceEdit.StartEditOperation()
+            Catch ex As Exception
+                MsgBox("Error starting an editing operation")
+                Exit Sub
+            End Try
+            
             'Do editing
 
 
             Dim pNewFeature As IFeature = pFeatureClass.CreateFeature()
 
-            Dim pPoly As IPolygon = New Polygon
+            'WHY IS THIS HERE??
+            'Dim pPoly As IPolygon = New Polygon
 
-            pWorkspaceEdit.StopEditOperation()
-            pWorkspaceEdit.StopEditing(True)
+            Try
+                pWorkspaceEdit.StopEditOperation()
+                pWorkspaceEdit.StopEditing(True)
+            Catch ex As Exception
+                MsgBox("Error ending an editing operation")
+                Exit Sub
+            End Try
+            
 
             If pNewFeature.HasOID = True Then
                 My.Settings.CurrentOID = pNewFeature.OID
@@ -1111,18 +1125,7 @@ Public Class frmRecordViewer
             Exit Sub
         End Try
         lblMSG1.Text = "A new feature has been added with ObjectID: " & My.Settings.CurrentOID.ToString()
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A new feature has been added with ObjectID: " & My.Settings.CurrentOID.ToString()
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A new feature has been added with ObjectID: " & My.Settings.CurrentOID.ToString()
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A new feature has been added with ObjectID: " & My.Settings.CurrentOID.ToString()
+        
 
         My.Settings.CurrentOID = 0
         lblOID.Text = "..."
