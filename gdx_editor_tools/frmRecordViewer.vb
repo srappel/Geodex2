@@ -481,6 +481,8 @@ Public Class frmRecordViewer
 
             If pNewFeature.HasOID = True Then
                 My.Settings.CurrentOID = pNewFeature.OID
+            Else
+                MsgBox("The new feature has no ObjectID", MsgBoxStyle.OkOnly)
             End If
 
         Catch ex As Exception
