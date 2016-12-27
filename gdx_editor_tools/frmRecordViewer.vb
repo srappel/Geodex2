@@ -1207,29 +1207,11 @@ Public Class frmRecordViewer
         lblWest.Text = "West"
 
         'If you're here it was successful
+        'Edited by SRA 12/27/16 to stop from flashing message because I think it was hanging the application
         lblOID.Text = My.Settings.CurrentOID.ToString()
         lblMSG1.Text = "A blank feature has been created with OID " & My.Settings.CurrentOID.ToString() &
             "; if you wish to copy another feature's shape, use the copy button."
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A blank feature has been created with OID " & My.Settings.CurrentOID.ToString() &
-            "; if you wish to copy another feature's shape, use the copy button."
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A blank feature has been created with OID " & My.Settings.CurrentOID.ToString() &
-            "; if you wish to copy another feature's shape, use the copy button."
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A blank feature has been created with OID " & My.Settings.CurrentOID.ToString() &
-            "; if you wish to copy another feature's shape, use the copy button."
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = ""
-        System.Threading.Thread.Sleep(200)
-        lblMSG1.Text = "A blank feature has been created with OID " & My.Settings.CurrentOID.ToString() &
-            "; if you wish to copy another feature's shape, use the copy button."
+        
     End Sub
 
     'Fill Form Function (FillForm(OID As Integer)) (527)
