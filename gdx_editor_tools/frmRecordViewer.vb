@@ -462,33 +462,46 @@ Public Class frmRecordViewer
     'ERROR CODE 120: Error when running the newfeature() command
     Private Sub newfeature()
         Try
+            'getgeodexlayer() gets the geodex layer
             Dim pFeatureLayer As IFeatureLayer = GDXTools.getInstance.GetGeodexLayer
+
+            'to get the dataset we need to get the featureclass
             Dim pFeatureClass As IFeatureClass = pFeatureLayer.FeatureClass
+
+            'getting the dataset (iFeatureClass implements iDataset)
             Dim pDataset As IDataset = pFeatureClass
+
+            'Now we have a workspace
             Dim pWorkspace As IWorkspace = pDataset.Workspace
+
+            'get access to the start editing method
             Dim pWorkspaceEdit As IWorkspaceEdit = pWorkspace
+
 
             Try
                 pWorkspaceEdit.StartEditing(True)
                 pWorkspaceEdit.StartEditOperation()
             Catch ex As Exception
-                MsgBox("Error starting an editing operation")
+                MsgBox("Error starting an editing operation", MsgBoxStyle.OkOnly)
                 Exit Sub
             End Try
             
             'Do editing
 
-
+            'createfeature returns a new record in the feature class and it's empty
             Dim pNewFeature As IFeature = pFeatureClass.CreateFeature()
 
             'WHY IS THIS HERE??
-            'Dim pPoly As IPolygon = New Polygon
+            Dim pPoly As IPolygon = New Polygon
+            Dim pShape As IGeometry = pPoly
+            pNewFeature.Shape = pShape
+            pNewFeature.Store()
 
             Try
                 pWorkspaceEdit.StopEditOperation()
                 pWorkspaceEdit.StopEditing(True)
             Catch ex As Exception
-                MsgBox("Error ending an editing operation")
+                MsgBox("Error ending an editing operation", MsgBoxStyle.OkOnly)
                 Exit Sub
             End Try
             
@@ -1199,6 +1212,7 @@ Public Class frmRecordViewer
     'this is used if the user loaded the information from an existing feature and just wants to make
     'a new feature with a new OID.
     Private Sub btNew_Click(sender As Object, e As EventArgs) Handles btNew.Click
+        MsgBox("Creating a new feature", MsgBoxStyle.OkOnly)
         Try
             newfeature()
         Catch ex As Exception
@@ -1216,7 +1230,7 @@ Public Class frmRecordViewer
         lblOID.Text = My.Settings.CurrentOID.ToString()
         lblMSG1.Text = "A blank feature has been created with OID " & My.Settings.CurrentOID.ToString() &
             "; if you wish to copy another feature's shape, use the copy button."
-        
+
     End Sub
 
     'Fill Form Function (FillForm(OID As Integer)) (527)

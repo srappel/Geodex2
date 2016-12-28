@@ -231,6 +231,7 @@ Partial Class frmRecordViewer
         '
         'btNew
         '
+        Me.btNew.BackColor = System.Drawing.SystemColors.Control
         Me.btNew.Location = New System.Drawing.Point(412, 13)
         Me.btNew.Name = "btNew"
         Me.btNew.Size = New System.Drawing.Size(42, 23)

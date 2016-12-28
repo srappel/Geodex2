@@ -20,9 +20,6 @@ H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tool
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\gdx_editor_tools.dll
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\gdx_editor_tools.pdb
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\gdx_editor_tools.xml
-H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\stdole.dll
-H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\TabOrder.pdb
-H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\TabOrder.xml
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Release\gdx_editor_tools.vbprojResolveAssemblyReference.cache
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Release\gdx_editor_tools.frmGeodatabaseSettings.resources
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Release\gdx_editor_tools.frmIndexEdit.resources
@@ -36,3 +33,4 @@ H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tool
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Release\gdx_editor_tools.pdb
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\gdx_editor_tools.tlb
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\ESRI.ArcGIS.Geometry.dll
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\ESRI.ArcGIS.Geometry.xml
