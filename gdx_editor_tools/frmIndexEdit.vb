@@ -46,93 +46,15 @@ Public Class frmIndexEdit
         End If
     End Sub
 
-    Public Sub gdxfilebox_SelectedIndexChanged(sender As Object, e As EventArgs)
-        'When the gdxfilebox is changed, we want to load that layer as the pSelectedLayer
-        'This box is populated with layers in the map (this code is in cmbIndexEdit.vb)
-
-
-
-    End Sub
-
-
-    Public Sub gidbox_TextChanged(sender As Object, e As EventArgs)
-        'This text box will contain the object ID of the feature to be edited
-        'maybe it wont need to be a .TextChanged method but
-        'I just wanted to document this box.
-
-
-
-    End Sub
-
-
     Public Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         'When this button is selected, the input method will be DMS
-        'RadioButton2.Checked = False
-        'RadioButton1.Checked = True
         If RadioButton1.Checked = True Then
-
-   
-
             TabControl.SelectTab(0)
-            northddbox.Visible = False
-            southddbox.Visible = False
-            eastddbox.Visible = False
-            westddbox.Visible = False
-
-            northcarbox.Visible = True
-            northdegbox.Visible = True
-            northminbox.Visible = True
-            northsecbox.Visible = True
-
-            southcarbox.Visible = True
-            southdegbox.Visible = True
-            southminbox.Visible = True
-            southsecbox.Visible = True
-
-            eastcarbox.Visible = True
-            eastdegbox.Visible = True
-            eastminbox.Visible = True
-            eastsecbox.Visible = True
-
-            westcarbox.Visible = True
-            westdegbox.Visible = True
-            westminbox.Visible = True
-            westsecbox.Visible = True
-
-
         ElseIf RadioButton1.Checked = False Then
-       
             TabControl.SelectTab(1)
-            northddbox.Visible = True
-            southddbox.Visible = True
-            eastddbox.Visible = True
-            westddbox.Visible = True
-
-            northcarbox.Visible = False
-            northdegbox.Visible = False
-            northminbox.Visible = False
-            northsecbox.Visible = False
-
-            southcarbox.Visible = False
-            southdegbox.Visible = False
-            southminbox.Visible = False
-            southsecbox.Visible = False
-
-            eastcarbox.Visible = False
-            eastdegbox.Visible = False
-            eastminbox.Visible = False
-            eastsecbox.Visible = False
-
-            westcarbox.Visible = False
-            westdegbox.Visible = False
-            westminbox.Visible = False
-            westsecbox.Visible = False
-
         End If
 
-
     End Sub
-
 
     Public Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         'When this button is selected, the input method will be DD
@@ -853,12 +775,5 @@ Public Class frmIndexEdit
             RadioButton2.Checked = True
         End If
 
-        'If TabControl.SelectedTab.Text = "DMS" Then
-        'RadioButton1.Checked = True
-        'RadioButton2.Checked = False
-        'Else
-        'RadioButton1.Checked = False
-        'RadioButton2.Checked = True
-        'End If
     End Sub
 End Class
