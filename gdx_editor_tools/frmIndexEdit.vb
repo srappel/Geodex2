@@ -70,15 +70,64 @@ Public Class frmIndexEdit
         'RadioButton2.Checked = False
         'RadioButton1.Checked = True
         If RadioButton1.Checked = True Then
+
+   
+
+            TabControl.SelectTab(0)
             northddbox.Visible = False
             southddbox.Visible = False
             eastddbox.Visible = False
             westddbox.Visible = False
+
+            northcarbox.Visible = True
+            northdegbox.Visible = True
+            northminbox.Visible = True
+            northsecbox.Visible = True
+
+            southcarbox.Visible = True
+            southdegbox.Visible = True
+            southminbox.Visible = True
+            southsecbox.Visible = True
+
+            eastcarbox.Visible = True
+            eastdegbox.Visible = True
+            eastminbox.Visible = True
+            eastsecbox.Visible = True
+
+            westcarbox.Visible = True
+            westdegbox.Visible = True
+            westminbox.Visible = True
+            westsecbox.Visible = True
+
+
         ElseIf RadioButton1.Checked = False Then
+       
+            TabControl.SelectTab(1)
             northddbox.Visible = True
             southddbox.Visible = True
             eastddbox.Visible = True
             westddbox.Visible = True
+
+            northcarbox.Visible = False
+            northdegbox.Visible = False
+            northminbox.Visible = False
+            northsecbox.Visible = False
+
+            southcarbox.Visible = False
+            southdegbox.Visible = False
+            southminbox.Visible = False
+            southsecbox.Visible = False
+
+            eastcarbox.Visible = False
+            eastdegbox.Visible = False
+            eastminbox.Visible = False
+            eastsecbox.Visible = False
+
+            westcarbox.Visible = False
+            westdegbox.Visible = False
+            westminbox.Visible = False
+            westsecbox.Visible = False
+
         End If
 
 
@@ -641,11 +690,11 @@ Public Class frmIndexEdit
         westddbox.Text = "0.0"
     End Sub
 
-    Public Sub northcarbox_TextChanged(sender As Object, e As EventArgs) Handles northcarbox.TextChanged, northdegbox.TextChanged, northminbox.TextChanged, northsecbox.TextChanged, southcarbox.TextChanged, southdegbox.TextChanged, southminbox.TextChanged, southsecbox.TextChanged, eastcarbox.TextChanged, eastdegbox.TextChanged, eastminbox.TextChanged, eastsecbox.TextChanged, westcarbox.TextChanged, westdegbox.TextChanged, westminbox.TextChanged, westsecbox.TextChanged
+    Public Sub northcarbox_TextChanged(sender As Object, e As EventArgs)
         RadioButton1.Checked = True
     End Sub
 
-    Public Sub northddbox_TextChanged(sender As Object, e As EventArgs) Handles northddbox.TextChanged, southddbox.TextChanged, eastddbox.TextChanged, westddbox.TextChanged
+    Public Sub northddbox_TextChanged(sender As Object, e As EventArgs)
         RadioButton2.Checked = True
     End Sub
 
@@ -792,5 +841,24 @@ Public Class frmIndexEdit
             End Try
 
         End If
+    End Sub
+
+    Private Sub TabControl_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl.SelectedIndexChanged
+
+        If TabControl.SelectedTab Is TabPage1 Then
+            RadioButton1.Checked = True
+            RadioButton2.Checked = False
+        Else
+            RadioButton1.Checked = False
+            RadioButton2.Checked = True
+        End If
+
+        'If TabControl.SelectedTab.Text = "DMS" Then
+        'RadioButton1.Checked = True
+        'RadioButton2.Checked = False
+        'Else
+        'RadioButton1.Checked = False
+        'RadioButton2.Checked = True
+        'End If
     End Sub
 End Class
