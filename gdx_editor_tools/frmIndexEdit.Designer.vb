@@ -128,7 +128,7 @@ Partial Class frmIndexEdit
         Me.lblOID.Location = New System.Drawing.Point(351, 30)
         Me.lblOID.Name = "lblOID"
         Me.lblOID.Size = New System.Drawing.Size(16, 13)
-        Me.lblOID.TabIndex = 4
+        Me.lblOID.TabIndex = 8
         Me.lblOID.Text = "..."
         '
         'Label8
@@ -137,7 +137,7 @@ Partial Class frmIndexEdit
         Me.Label8.Location = New System.Drawing.Point(253, 30)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(92, 13)
-        Me.Label8.TabIndex = 3
+        Me.Label8.TabIndex = 0
         Me.Label8.Text = "Current Object ID:"
         '
         'Label7
@@ -180,7 +180,7 @@ Partial Class frmIndexEdit
         Me.lblSeries.Location = New System.Drawing.Point(309, 54)
         Me.lblSeries.Name = "lblSeries"
         Me.lblSeries.Size = New System.Drawing.Size(16, 13)
-        Me.lblSeries.TabIndex = 8
+        Me.lblSeries.TabIndex = 10
         Me.lblSeries.Text = "..."
         '
         'lblLocation
@@ -189,7 +189,7 @@ Partial Class frmIndexEdit
         Me.lblLocation.Location = New System.Drawing.Point(91, 69)
         Me.lblLocation.Name = "lblLocation"
         Me.lblLocation.Size = New System.Drawing.Size(16, 13)
-        Me.lblLocation.TabIndex = 10
+        Me.lblLocation.TabIndex = 6
         Me.lblLocation.Text = "..."
         '
         'lblRecord
@@ -198,7 +198,7 @@ Partial Class frmIndexEdit
         Me.lblRecord.Location = New System.Drawing.Point(91, 54)
         Me.lblRecord.Name = "lblRecord"
         Me.lblRecord.Size = New System.Drawing.Size(16, 13)
-        Me.lblRecord.TabIndex = 6
+        Me.lblRecord.TabIndex = 4
         Me.lblRecord.Text = "..."
         '
         'Label25
@@ -216,7 +216,7 @@ Partial Class frmIndexEdit
         Me.Label16.Location = New System.Drawing.Point(33, 69)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 13)
-        Me.Label16.TabIndex = 9
+        Me.Label16.TabIndex = 5
         Me.Label16.Text = "Location:"
         '
         'Label11
@@ -225,7 +225,7 @@ Partial Class frmIndexEdit
         Me.Label11.Location = New System.Drawing.Point(253, 54)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(39, 13)
-        Me.Label11.TabIndex = 7
+        Me.Label11.TabIndex = 9
         Me.Label11.Text = "Series:"
         '
         'Label5
@@ -234,7 +234,7 @@ Partial Class frmIndexEdit
         Me.Label5.Location = New System.Drawing.Point(33, 54)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 13)
-        Me.Label5.TabIndex = 5
+        Me.Label5.TabIndex = 3
         Me.Label5.Text = "Record:"
         '
         'GroupBox2
@@ -255,14 +255,17 @@ Partial Class frmIndexEdit
         '
         Me.TabControl.Controls.Add(Me.TabPage1)
         Me.TabControl.Controls.Add(Me.TabPage2)
+        Me.TabControl.HotTrack = True
         Me.TabControl.Location = New System.Drawing.Point(34, 65)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
         Me.TabControl.Size = New System.Drawing.Size(301, 160)
-        Me.TabControl.TabIndex = 1
+        Me.TabControl.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TabPage1.Controls.Add(Me.Label28)
         Me.TabPage1.Controls.Add(Me.Label29)
         Me.TabPage1.Controls.Add(Me.Label30)
@@ -295,13 +298,13 @@ Partial Class frmIndexEdit
         Me.TabPage1.Controls.Add(Me.westminbox)
         Me.TabPage1.Controls.Add(Me.westcarbox)
         Me.TabPage1.Controls.Add(Me.westdegbox)
+        Me.TabPage1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(293, 134)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "DMS"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Label28
         '
@@ -311,7 +314,7 @@ Partial Class frmIndexEdit
         Me.Label28.Location = New System.Drawing.Point(200, 11)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(12, 20)
-        Me.Label28.TabIndex = 61
+        Me.Label28.TabIndex = 3
         Me.Label28.Text = "'"
         '
         'Label29
@@ -355,7 +358,7 @@ Partial Class frmIndexEdit
         Me.Label32.Location = New System.Drawing.Point(263, 10)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(15, 20)
-        Me.Label32.TabIndex = 73
+        Me.Label32.TabIndex = 4
         Me.Label32.Text = "''"
         '
         'Label33
@@ -399,7 +402,7 @@ Partial Class frmIndexEdit
         Me.Label36.Location = New System.Drawing.Point(144, 11)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(14, 20)
-        Me.Label36.TabIndex = 57
+        Me.Label36.TabIndex = 2
         Me.Label36.Text = "°"
         '
         'Label37
@@ -441,7 +444,7 @@ Partial Class frmIndexEdit
         Me.Label40.Location = New System.Drawing.Point(5, 18)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(66, 13)
-        Me.Label40.TabIndex = 53
+        Me.Label40.TabIndex = 0
         Me.Label40.Text = "North Extent"
         '
         'Label41
@@ -500,7 +503,7 @@ Partial Class frmIndexEdit
         Me.northcarbox.Location = New System.Drawing.Point(76, 14)
         Me.northcarbox.Name = "northcarbox"
         Me.northcarbox.Size = New System.Drawing.Size(25, 20)
-        Me.northcarbox.TabIndex = 54
+        Me.northcarbox.TabIndex = 55
         Me.northcarbox.Text = "N"
         '
         'northsecbox
@@ -508,7 +511,7 @@ Partial Class frmIndexEdit
         Me.northsecbox.Location = New System.Drawing.Point(214, 14)
         Me.northsecbox.Name = "northsecbox"
         Me.northsecbox.Size = New System.Drawing.Size(50, 20)
-        Me.northsecbox.TabIndex = 60
+        Me.northsecbox.TabIndex = 58
         Me.northsecbox.Text = "0"
         '
         'northdegbox
@@ -524,7 +527,7 @@ Partial Class frmIndexEdit
         Me.northminbox.Location = New System.Drawing.Point(160, 14)
         Me.northminbox.Name = "northminbox"
         Me.northminbox.Size = New System.Drawing.Size(42, 20)
-        Me.northminbox.TabIndex = 58
+        Me.northminbox.TabIndex = 57
         Me.northminbox.Text = "0"
         '
         'southcarbox
@@ -540,7 +543,7 @@ Partial Class frmIndexEdit
         Me.southdegbox.Location = New System.Drawing.Point(107, 37)
         Me.southdegbox.Name = "southdegbox"
         Me.southdegbox.Size = New System.Drawing.Size(39, 20)
-        Me.southdegbox.TabIndex = 62
+        Me.southdegbox.TabIndex = 60
         Me.southdegbox.Text = "0"
         '
         'southminbox
@@ -601,6 +604,8 @@ Partial Class frmIndexEdit
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TabPage2.Controls.Add(Me.northddbox)
         Me.TabPage2.Controls.Add(Me.westddbox)
         Me.TabPage2.Controls.Add(Me.eastddbox)
@@ -615,7 +620,6 @@ Partial Class frmIndexEdit
         Me.TabPage2.Size = New System.Drawing.Size(293, 134)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "DD"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'northddbox
         '
@@ -690,7 +694,7 @@ Partial Class frmIndexEdit
         Me.btLoadExt.Location = New System.Drawing.Point(86, 231)
         Me.btLoadExt.Name = "btLoadExt"
         Me.btLoadExt.Size = New System.Drawing.Size(205, 23)
-        Me.btLoadExt.TabIndex = 68
+        Me.btLoadExt.TabIndex = 1
         Me.btLoadExt.Text = "Get Extent from Selected Feature"
         Me.btLoadExt.UseVisualStyleBackColor = True
         '
@@ -721,7 +725,7 @@ Partial Class frmIndexEdit
         Me.cmdClear1.Location = New System.Drawing.Point(341, 101)
         Me.cmdClear1.Name = "cmdClear1"
         Me.cmdClear1.Size = New System.Drawing.Size(22, 89)
-        Me.cmdClear1.TabIndex = 51
+        Me.cmdClear1.TabIndex = 3
         Me.cmdClear1.Text = "CLEAR"
         Me.cmdClear1.UseVisualStyleBackColor = True
         '
@@ -732,7 +736,7 @@ Partial Class frmIndexEdit
         Me.Button1.Location = New System.Drawing.Point(187, 436)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 25
+        Me.Button1.TabIndex = 17
         Me.Button1.Text = "Cancel"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -742,7 +746,7 @@ Partial Class frmIndexEdit
         Me.Label6.Location = New System.Drawing.Point(33, 372)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 13)
-        Me.Label6.TabIndex = 22
+        Me.Label6.TabIndex = 14
         Me.Label6.Text = "Prime Meridian"
         '
         'primerbox
@@ -755,7 +759,7 @@ Partial Class frmIndexEdit
         Me.primerbox.Location = New System.Drawing.Point(115, 367)
         Me.primerbox.Name = "primerbox"
         Me.primerbox.Size = New System.Drawing.Size(219, 21)
-        Me.primerbox.TabIndex = 23
+        Me.primerbox.TabIndex = 15
         '
         'sibox
         '
@@ -763,7 +767,7 @@ Partial Class frmIndexEdit
         Me.sibox.Location = New System.Drawing.Point(115, 407)
         Me.sibox.Name = "sibox"
         Me.sibox.Size = New System.Drawing.Size(219, 23)
-        Me.sibox.TabIndex = 24
+        Me.sibox.TabIndex = 16
         Me.sibox.Text = "Create/Update Spatial Index"
         Me.sibox.UseVisualStyleBackColor = False
         '

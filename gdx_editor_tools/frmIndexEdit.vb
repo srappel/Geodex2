@@ -776,4 +776,5 @@ Public Class frmIndexEdit
         End If
 
     End Sub
+
 End Class
