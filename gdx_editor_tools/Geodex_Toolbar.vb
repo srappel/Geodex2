@@ -85,7 +85,7 @@ Public NotInheritable Class Geodex_Toolbar
     Public Overrides ReadOnly Property Caption() As String
         Get
             'TODO: Replace bar caption
-            Return "Geodex Toolbar"
+            Return "Geodex Toolbar 2.0.1"
         End Get
     End Property
 
