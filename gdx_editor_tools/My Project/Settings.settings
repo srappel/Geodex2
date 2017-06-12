@@ -51,7 +51,7 @@
       <Value Profile="(Default)">H:\Departments\AGSL\GIS\Projects\GEODEX\Geodex.gdb</Value>
     </Setting>
     <Setting Name="DBLocal" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="FeatureClassName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Geodex</Value>

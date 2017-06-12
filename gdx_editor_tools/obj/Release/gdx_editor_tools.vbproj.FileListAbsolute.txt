@@ -34,3 +34,6 @@ H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tool
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\gdx_editor_tools.tlb
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\ESRI.ArcGIS.Geometry.dll
 H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\ESRI.ArcGIS.Geometry.xml
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\Microsoft.VisualBasic.PowerPacks.Design.dll
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\bin\Release\Microsoft.VisualBasic.PowerPacks.xml

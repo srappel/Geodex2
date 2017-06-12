@@ -57,6 +57,27 @@ Public Class GDXTools
             Return Nothing
         End Try
     End Function
+
+    Public Function FmtDegMinSec(ByVal DD As Single)
+        Dim deg As Integer
+        Dim minDouble As Double
+        Dim min As Integer
+        Dim sec As Double
+        Dim dms As String
+
+        'how to account for negative values indicating south and east?
+        'Here, I will just use absolute values to determine, then we can handle the E and West in the fillform function
+        'This is working well now.  Still need to account for E and W
+
+        deg = Math.Truncate(DD)
+        minDouble = (DD - deg) * 60
+        min = Math.Truncate(minDouble)
+        sec = Math.Round((minDouble - min) * 60, 2)
+        dms = Math.Abs(deg) & "° " & Math.Abs(min) & "' " & Math.Abs(sec) & "''"
+        Return dms
+
+    End Function
+
 End Class
 
 

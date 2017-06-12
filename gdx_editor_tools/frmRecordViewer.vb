@@ -5,6 +5,7 @@ Imports ESRI.ArcGIS.Carto
 Imports ESRI.ArcGIS.Geometry
 Imports ESRI.ArcGIS.Geodatabase
 Imports gdx_editor_tools.frmIndexEdit
+Imports gdx_editor_tools.GDXTools
 Imports ESRI.ArcGIS.Display
 Imports System.Windows.Forms
 
@@ -205,6 +206,10 @@ Public Class frmRecordViewer
         lblSouth.Text = "South Extent"
         dudHold.SelectedIndex = 19
         lblOID.Text = "..."
+        lblNDMS.Text = Nothing
+        lblSDMS.Text = Nothing
+        lblEDMS.Text = Nothing
+        lblWDMS.Text = Nothing
 
     End Sub
 
@@ -1807,6 +1812,17 @@ Public Class frmRecordViewer
             If IsDBNull(pFeature.Value(pFeature.Fields.FindField("X1"))) = False Then
                 pRecord.X1 = pFeature.Value(pFeature.Fields.FindField("X1"))
                 lblWest.Text = pRecord.X1.ToString()
+
+                Dim cardinalX1 As String = Nothing
+                If pRecord.X1 > 0 Then
+                    cardinalX1 = "E "
+                ElseIf pRecord.X1 < 0 Then
+                    cardinalX1 = "W "
+                End If
+
+                Dim WDMSString As String = cardinalX1 & GDXTools.getInstance.FmtDegMinSec(pRecord.X1)
+                lblWDMS.Text = WDMSString
+
             Else
                 pRecord.X1 = Nothing
             End If
@@ -1814,6 +1830,17 @@ Public Class frmRecordViewer
             If IsDBNull(pFeature.Value(pFeature.Fields.FindField("X2"))) = False Then
                 pRecord.X2 = pFeature.Value(pFeature.Fields.FindField("X2"))
                 lblEast.Text = pRecord.X2.ToString()
+
+                Dim cardinalX2 As String = Nothing
+                If pRecord.X2 > 0 Then
+                    cardinalX2 = "E "
+                ElseIf pRecord.X2 < 0 Then
+                    cardinalX2 = "W "
+                End If
+
+                Dim EDMSString As String = cardinalX2 & GDXTools.getInstance.FmtDegMinSec(pRecord.X2)
+                lblEDMS.Text = EDMSString
+
             Else
                 pRecord.X2 = Nothing
             End If
@@ -1821,6 +1848,18 @@ Public Class frmRecordViewer
             If IsDBNull(pFeature.Value(pFeature.Fields.FindField("Y1"))) = False Then
                 pRecord.Y1 = pFeature.Value(pFeature.Fields.FindField("Y1"))
                 lblNorth.Text = pRecord.Y1.ToString()
+
+                Dim cardinalY1 As String = Nothing
+                If pRecord.Y1 > 0 Then
+                    cardinalY1 = "N "
+                ElseIf pRecord.Y1 < 0 Then
+                    cardinalY1 = "S "
+                End If
+
+                Dim NDMSString As String = cardinalY1 & GDXTools.getInstance.FmtDegMinSec(pRecord.Y1)
+                lblNDMS.Text = NDMSString
+
+
             Else
                 pRecord.Y1 = Nothing
             End If
@@ -1828,6 +1867,17 @@ Public Class frmRecordViewer
             If IsDBNull(pFeature.Value(pFeature.Fields.FindField("Y2"))) = False Then
                 pRecord.Y2 = pFeature.Value(pFeature.Fields.FindField("Y2"))
                 lblSouth.Text = pRecord.Y2.ToString()
+
+                Dim cardinalY2 As String = Nothing
+                If pRecord.Y2 > 0 Then
+                    cardinalY2 = "N "
+                ElseIf pRecord.Y2 < 0 Then
+                    cardinalY2 = "S "
+                End If
+
+                Dim SDMSString As String = cardinalY2 & GDXTools.getInstance.FmtDegMinSec(pRecord.Y2)
+                lblSDMS.Text = SDMSString
+
             Else
                 pRecord.Y2 = Nothing
             End If

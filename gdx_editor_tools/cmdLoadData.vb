@@ -102,25 +102,28 @@ Public NotInheritable Class cmdLoadData
         'TODO: Add cmdLoadData.OnClick implementation
         'if my.settings.dblocal is false then we're connecting to a SDE
         'if my.settings.dblocal is true we are connecting to a FGDB
+        'MsgBox("The button is working", MsgBoxStyle.OkOnly)
+
         If My.Settings.DBLocal = False Then
             Try
-                MsgBox("This may take some time.  Please be patient.", MsgBoxStyle.OkOnly)
-                Dim pPropertySet As IPropertySet = New PropertySetClass()
-                pPropertySet.SetProperty("SERVER", My.Settings.server)
-                pPropertySet.SetProperty("AUTHENTICATION_MODE", My.Settings.auth)
-                pPropertySet.SetProperty("INSTANCE", My.Settings.instance)
-                pPropertySet.SetProperty("DATABASE", My.Settings.database)
-                pPropertySet.SetProperty("VERSION", My.Settings.version)
-
-                Dim pWorkspaceFactory As IWorkspaceFactory = New SdeWorkspaceFactory
-                Dim pWorkspace As IWorkspace = pWorkspaceFactory.Open(pPropertySet, _application.hWnd)
-                ' OpenFromFile("Database Connections\Connection to WEBGIS.sde", _application.hWnd)
-                Dim pFeatureWorkspace As IFeatureWorkspace = pWorkspace
-                Dim FeatureClassName As String = My.Settings.FeatureClassName
-                Dim pGeodexFeatureClass As IFeatureClass = pFeatureWorkspace.OpenFeatureClass(FeatureClassName)
-                Dim pMXDoc As IMxDocument = _application.Document
-                Dim pMap As IMap = pMXDoc.FocusMap
+                'MsgBox("This may take some time.  Please be patient.", MsgBoxStyle.OkOnly)
                 Try
+                    Dim pPropertySet As IPropertySet = New PropertySetClass()
+                    pPropertySet.SetProperty("SERVER", My.Settings.server)
+                    pPropertySet.SetProperty("AUTHENTICATION_MODE", My.Settings.auth)
+                    pPropertySet.SetProperty("INSTANCE", My.Settings.instance)
+                    pPropertySet.SetProperty("DATABASE", My.Settings.database)
+                    pPropertySet.SetProperty("VERSION", My.Settings.version)
+
+                    Dim pWorkspaceFactory As IWorkspaceFactory = New SdeWorkspaceFactory
+                    Dim pWorkspace As IWorkspace = pWorkspaceFactory.Open(pPropertySet, _application.hWnd)
+                    ' OpenFromFile("Database Connections\Connection to WEBGIS.sde", _application.hWnd)
+                    Dim pFeatureWorkspace As IFeatureWorkspace = pWorkspace
+                    Dim FeatureClassName As String = My.Settings.FeatureClassName
+                    Dim pGeodexFeatureClass As IFeatureClass = pFeatureWorkspace.OpenFeatureClass(FeatureClassName)
+                    Dim pMXDoc As IMxDocument = _application.Document
+                    Dim pMap As IMap = pMXDoc.FocusMap
+
                     For i As Integer = 0 To pMap.LayerCount - 1
                         Dim pLayer As ILayer = pMap.Layer(i)
 
@@ -142,18 +145,19 @@ Public NotInheritable Class cmdLoadData
                 Exit Sub
             End Try
         ElseIf My.Settings.DBLocal = True Then
-            Dim pWorkspaceFactory As IWorkspaceFactory = New FileGDBWorkspaceFactory
-            If My.Settings.path = Nothing Then
-                Exit Sub
-            End If
-            Dim pWorkspace As IWorkspace = pWorkspaceFactory.OpenFromFile(My.Settings.path, _application.hWnd)
-            ' OpenFromFile("Database Connections\Connection to WEBGIS.sde", _application.hWnd)
-            Dim pFeatureWorkspace As IFeatureWorkspace = pWorkspace
-            Dim FeatureClassName As String = My.Settings.FeatureClassName
-            Dim pGeodexFeatureClass As IFeatureClass = pFeatureWorkspace.OpenFeatureClass(FeatureClassName)
-            Dim pMXDoc As IMxDocument = _application.Document
-            Dim pMap As IMap = pMXDoc.FocusMap
             Try
+                Dim pWorkspaceFactory As IWorkspaceFactory = New FileGDBWorkspaceFactory
+                If My.Settings.path = Nothing Then
+                    Exit Sub
+                End If
+                Dim pWorkspace As IWorkspace = pWorkspaceFactory.OpenFromFile(My.Settings.path, _application.hWnd)
+                ' OpenFromFile("Database Connections\Connection to WEBGIS.sde", _application.hWnd)
+                Dim pFeatureWorkspace As IFeatureWorkspace = pWorkspace
+                Dim FeatureClassName As String = My.Settings.FeatureClassName
+                Dim pGeodexFeatureClass As IFeatureClass = pFeatureWorkspace.OpenFeatureClass(FeatureClassName)
+                Dim pMXDoc As IMxDocument = _application.Document
+                Dim pMap As IMap = pMXDoc.FocusMap
+
                 For i As Integer = 0 To pMap.LayerCount - 1
                     Dim pLayer As ILayer = pMap.Layer(i)
 

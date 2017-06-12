@@ -74,7 +74,10 @@ Partial Class frmRecordViewer
         Me.btCommit = New System.Windows.Forms.Button()
         Me.askcommit = New System.Windows.Forms.Button()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Label47 = New System.Windows.Forms.Label()
+        Me.lblEDMS = New System.Windows.Forms.Label()
+        Me.lblSDMS = New System.Windows.Forms.Label()
+        Me.lblWDMS = New System.Windows.Forms.Label()
+        Me.lblNDMS = New System.Windows.Forms.Label()
         Me.btEdit = New System.Windows.Forms.Button()
         Me.lblEast = New System.Windows.Forms.Label()
         Me.lblWest = New System.Windows.Forms.Label()
@@ -647,7 +650,10 @@ Partial Class frmRecordViewer
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.Label47)
+        Me.GroupBox6.Controls.Add(Me.lblEDMS)
+        Me.GroupBox6.Controls.Add(Me.lblSDMS)
+        Me.GroupBox6.Controls.Add(Me.lblWDMS)
+        Me.GroupBox6.Controls.Add(Me.lblNDMS)
         Me.GroupBox6.Controls.Add(Me.btEdit)
         Me.GroupBox6.Controls.Add(Me.lblEast)
         Me.GroupBox6.Controls.Add(Me.lblWest)
@@ -658,16 +664,51 @@ Partial Class frmRecordViewer
         Me.GroupBox6.Size = New System.Drawing.Size(356, 174)
         Me.GroupBox6.TabIndex = 5
         Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Spatial Index"
+        Me.GroupBox6.Text = "Spatial Index (Greenwich)"
         '
-        'Label47
+        'lblEDMS
         '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(274, 158)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(76, 13)
-        Me.Label47.TabIndex = 5
-        Me.Label47.Text = "Prime Meridian"
+        Me.lblEDMS.BackColor = System.Drawing.SystemColors.Control
+        Me.lblEDMS.Location = New System.Drawing.Point(200, 97)
+        Me.lblEDMS.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblEDMS.MinimumSize = New System.Drawing.Size(150, 13)
+        Me.lblEDMS.Name = "lblEDMS"
+        Me.lblEDMS.Size = New System.Drawing.Size(150, 13)
+        Me.lblEDMS.TabIndex = 9
+        Me.lblEDMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblSDMS
+        '
+        Me.lblSDMS.BackColor = System.Drawing.SystemColors.Control
+        Me.lblSDMS.Location = New System.Drawing.Point(103, 141)
+        Me.lblSDMS.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblSDMS.MinimumSize = New System.Drawing.Size(150, 13)
+        Me.lblSDMS.Name = "lblSDMS"
+        Me.lblSDMS.Size = New System.Drawing.Size(150, 13)
+        Me.lblSDMS.TabIndex = 8
+        Me.lblSDMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblWDMS
+        '
+        Me.lblWDMS.BackColor = System.Drawing.SystemColors.Control
+        Me.lblWDMS.Location = New System.Drawing.Point(7, 97)
+        Me.lblWDMS.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblWDMS.MinimumSize = New System.Drawing.Size(150, 13)
+        Me.lblWDMS.Name = "lblWDMS"
+        Me.lblWDMS.Size = New System.Drawing.Size(150, 13)
+        Me.lblWDMS.TabIndex = 7
+        Me.lblWDMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblNDMS
+        '
+        Me.lblNDMS.BackColor = System.Drawing.SystemColors.Control
+        Me.lblNDMS.Location = New System.Drawing.Point(103, 53)
+        Me.lblNDMS.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblNDMS.MinimumSize = New System.Drawing.Size(150, 13)
+        Me.lblNDMS.Name = "lblNDMS"
+        Me.lblNDMS.Size = New System.Drawing.Size(150, 13)
+        Me.lblNDMS.TabIndex = 6
+        Me.lblNDMS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btEdit
         '
@@ -680,39 +721,47 @@ Partial Class frmRecordViewer
         '
         'lblEast
         '
-        Me.lblEast.AutoSize = True
-        Me.lblEast.Location = New System.Drawing.Point(241, 83)
+        Me.lblEast.Location = New System.Drawing.Point(200, 78)
+        Me.lblEast.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblEast.MinimumSize = New System.Drawing.Size(150, 13)
         Me.lblEast.Name = "lblEast"
-        Me.lblEast.Size = New System.Drawing.Size(61, 13)
+        Me.lblEast.Size = New System.Drawing.Size(150, 13)
         Me.lblEast.TabIndex = 3
         Me.lblEast.Text = "East Extent"
+        Me.lblEast.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblWest
         '
-        Me.lblWest.AutoSize = True
-        Me.lblWest.Location = New System.Drawing.Point(71, 83)
+        Me.lblWest.Location = New System.Drawing.Point(7, 78)
+        Me.lblWest.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblWest.MinimumSize = New System.Drawing.Size(150, 13)
         Me.lblWest.Name = "lblWest"
-        Me.lblWest.Size = New System.Drawing.Size(65, 13)
+        Me.lblWest.Size = New System.Drawing.Size(150, 13)
         Me.lblWest.TabIndex = 2
         Me.lblWest.Text = "West Extent"
+        Me.lblWest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblSouth
         '
-        Me.lblSouth.AutoSize = True
-        Me.lblSouth.Location = New System.Drawing.Point(159, 138)
+        Me.lblSouth.Location = New System.Drawing.Point(103, 122)
+        Me.lblSouth.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblSouth.MinimumSize = New System.Drawing.Size(150, 13)
         Me.lblSouth.Name = "lblSouth"
-        Me.lblSouth.Size = New System.Drawing.Size(68, 13)
+        Me.lblSouth.Size = New System.Drawing.Size(150, 13)
         Me.lblSouth.TabIndex = 4
         Me.lblSouth.Text = "South Extent"
+        Me.lblSouth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblNorth
         '
-        Me.lblNorth.AutoSize = True
-        Me.lblNorth.Location = New System.Drawing.Point(159, 22)
+        Me.lblNorth.Location = New System.Drawing.Point(103, 34)
+        Me.lblNorth.MaximumSize = New System.Drawing.Size(150, 13)
+        Me.lblNorth.MinimumSize = New System.Drawing.Size(150, 13)
         Me.lblNorth.Name = "lblNorth"
-        Me.lblNorth.Size = New System.Drawing.Size(66, 13)
+        Me.lblNorth.Size = New System.Drawing.Size(150, 13)
         Me.lblNorth.TabIndex = 1
         Me.lblNorth.Text = "North Extent"
+        Me.lblNorth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GroupBox3
         '
@@ -1259,7 +1308,6 @@ Partial Class frmRecordViewer
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -1309,7 +1357,6 @@ Partial Class frmRecordViewer
     Friend WithEvents btCommitCopy As System.Windows.Forms.Button
     Friend WithEvents btCommit As System.Windows.Forms.Button
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents btEdit As System.Windows.Forms.Button
     Friend WithEvents lblEast As System.Windows.Forms.Label
     Friend WithEvents lblWest As System.Windows.Forms.Label
@@ -1374,4 +1421,8 @@ Partial Class frmRecordViewer
     Friend WithEvents cbyearval1 As System.Windows.Forms.CheckBox
     Friend WithEvents txtEdition As System.Windows.Forms.TextBox
     Friend WithEvents askcommit As System.Windows.Forms.Button
+    Friend WithEvents lblEDMS As System.Windows.Forms.Label
+    Friend WithEvents lblSDMS As System.Windows.Forms.Label
+    Friend WithEvents lblWDMS As System.Windows.Forms.Label
+    Friend WithEvents lblNDMS As System.Windows.Forms.Label
 End Class
