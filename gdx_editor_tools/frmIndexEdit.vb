@@ -527,12 +527,16 @@ Public Class frmIndexEdit
         pPoint(3).X = west
         pPoint(3).Y = south
 
-        pPolygonPoints.AddPoint(pPoint(0))
-        pPolygonPoints.AddPoint(pPoint(1))
-        pPolygonPoints.AddPoint(pPoint(2))
-        pPolygonPoints.AddPoint(pPoint(3))
-        pPolygonPoints.AddPoint(pPoint(0))
-        'Just added the second point 0 to make a full circle of polygons
+        Try
+            pPolygonPoints.AddPoint(pPoint(0))
+            pPolygonPoints.AddPoint(pPoint(1))
+            pPolygonPoints.AddPoint(pPoint(2))
+            pPolygonPoints.AddPoint(pPoint(3))
+            pPolygonPoints.AddPoint(pPoint(0))
+            'Just added the second point 0 to make a full circle of polygons
+        Catch ex As Exception
+            MsgBox(ex.ToString, MsgBoxStyle.OkOnly)
+        End Try
 
         Dim pGeogRef As ISpatialReference = GetcoordinateSystem()
         pPolygon.SpatialReference = pGeogRef

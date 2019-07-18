@@ -19,3 +19,14 @@ C:\Users\srappel\documents\visual studio 2013\Projects\gdx_editor_tools\gdx_edit
 C:\Users\srappel\documents\visual studio 2013\Projects\gdx_editor_tools\gdx_editor_tools\bin\Debug\TabOrder.pdb
 C:\Users\srappel\documents\visual studio 2013\Projects\gdx_editor_tools\gdx_editor_tools\bin\Debug\TabOrder.xml
 C:\Users\srappel\documents\visual studio 2013\Projects\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.vbprojResolveAssemblyReference.cache
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.vbprojResolveAssemblyReference.cache
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.frmGeodatabaseSettings.resources
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.frmIndexEdit.resources
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.frmReconcile.resources
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.frmViewer.resources
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.Resources.resources
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.frmRecordViewer.resources
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.vbproj.GenerateResource.Cache
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.dll
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.xml
+H:\Departments\AGSL\GIS\Projects\GEODEX\Project\gdx_editor_tools\gdx_editor_tools\obj\Debug\gdx_editor_tools.pdb
